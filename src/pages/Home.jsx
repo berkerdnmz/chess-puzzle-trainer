@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <div className="home">
       <div className="home-hero">
-        <div className="hero-glyph">♟</div>
+        <img src="/logo.svg" alt="DecoyPuzzle" style={{ width: '160px', height: '160px', objectFit: 'contain' }} />
         <h1 className="hero-title">
           Not every position has a <em>winning move</em>.
         </h1>

@@ -2,7 +2,7 @@ export default function About() {
   return (
     <div className="about-page">
       <div className="about-hero">
-        <div className="hero-glyph">♟</div>
+        <img src="/logo.svg" alt="DecoyPuzzle" style={{ width: '160px', height: '160px', objectFit: 'contain' }} />
         <h1 className="hero-title">About DecoyPuzzle</h1>
       </div>
 

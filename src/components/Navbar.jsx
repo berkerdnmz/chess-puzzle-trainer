@@ -15,7 +15,7 @@ export default function Navbar() {
     <nav className="navbar">
       <div className="navbar-left">
         <Link to="/" className="navbar-brand">
-          <span className="brand-icon">♟</span>
+          <img src="/logo.svg" alt="DecoyPuzzle" style={{ width: '40px', height: '40px', objectFit: 'contain', display: 'block' }} />
           <span className="brand-text">DecoyPuzzle</span>
         </Link>
         <Link to="/puzzles" className="nav-link">
