@@ -1,4 +1,4 @@
-# ♟ DecoyPuzzle — Chess Puzzle Trainer
+# ♟ DecoyPuzzle
 
 A chess puzzle trainer with a twist: before making a move, you must first judge whether the position even has a winning move.
 
