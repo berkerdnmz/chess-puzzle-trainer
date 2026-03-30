@@ -101,32 +101,22 @@ export default function PuzzlePage() {
     const minRating = hasWinningMove ? playerElo - range + jitter : 0;
     const maxRating = hasWinningMove ? playerElo + range + jitter : 9999;
 
-    let { data } = user
-      ? await supabase.rpc("get_unseen_puzzles", {
-          p_user_id: user.id,
-          p_min_rating: minRating,
-          p_max_rating: maxRating,
-          p_limit: 50,
-          p_has_winning_move: hasWinningMove,
-        })
-      : await supabase
-          .from("puzzles")
-          .select("*")
-          .eq("has_winning_move", hasWinningMove)
-          .gte("rating", minRating)
-          .lte("rating", maxRating)
-          .limit(50);
+    let { data } = await supabase.rpc("get_unseen_puzzles", {
+      p_user_id: user?.id ?? null,
+      p_min_rating: minRating,
+      p_max_rating: maxRating,
+      p_limit: 50,
+      p_has_winning_move: hasWinningMove,
+    });
 
     if (!data || data.length === 0) {
-      const { data: fallback } = user
-        ? await supabase.rpc("get_unseen_puzzles", {
-            p_user_id: user.id,
-            p_min_rating: 0,
-            p_max_rating: 9999,
-            p_limit: 20,
-            p_has_winning_move: hasWinningMove,
-          })
-        : await supabase.from("puzzles").select("*").eq("has_winning_move", hasWinningMove).limit(20);
+      const { data: fallback } = await supabase.rpc("get_unseen_puzzles", {
+        p_user_id: user?.id ?? null,
+        p_min_rating: 0,
+        p_max_rating: 9999,
+        p_limit: 20,
+        p_has_winning_move: hasWinningMove,
+      });
       data = fallback;
     }
 
