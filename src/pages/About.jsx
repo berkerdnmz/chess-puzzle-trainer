@@ -2,7 +2,11 @@ export default function About() {
   return (
     <div className="about-page">
       <div className="about-hero">
-        <img src="/logo.svg" alt="DecoyPuzzle" style={{ width: '160px', height: '160px', objectFit: 'contain' }} />
+        <img
+          src="/logo.svg"
+          alt="DecoyPuzzle"
+          style={{ width: "160px", height: "160px", objectFit: "contain" }}
+        />
         <h1 className="hero-title">About DecoyPuzzle</h1>
       </div>
 
@@ -26,7 +30,7 @@ export default function About() {
           <p>
             Built by{" "}
             <a
-              href="https://github.com/berkerdnmz/chess-puzzle-trainer"
+              href="https://github.com/berkerdnmz/decoypuzzle"
               target="_blank"
               rel="noopener noreferrer"
               style={{ color: "var(--accent)", textDecoration: "none" }}
@@ -54,8 +58,9 @@ export default function About() {
               rel="noopener noreferrer"
               style={{ color: "var(--accent)", textDecoration: "none" }}
             >
-              Lichess open database 
-            </a> under the CC0 license. Lichess is a free, open source chess server.
+              Lichess open database
+            </a>{" "}
+            under the CC0 license. Lichess is a free, open source chess server.
           </p>
         </div>
 

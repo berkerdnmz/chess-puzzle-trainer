@@ -458,8 +458,38 @@ body {
   text-align: center;
 }
 
-.puzzle-card-winning {
-  font-size: 0.7rem;
-  color: var(--text2);
-  text-align: center;
+/* ── NAVBAR MOBILE ── */
+@media (max-width: 600px) {
+  .navbar {
+    padding: 0 1rem;
+  }
+
+  .brand-text {
+    display: none;
+  }
+
+  .elo-badge {
+    display: none;
+  }
+
+  .nav-link {
+    margin-left: 0.25rem;
+    font-size: 0.8rem;
+  }
+
+  .user-name {
+    font-size: 0.75rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .signin-btn {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .theme-btn {
+    width: 28px;
+    height: 28px;
+    font-size: 0.85rem;
+  }
 }
